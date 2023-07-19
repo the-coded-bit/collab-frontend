@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap");
+
+.login-container {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-group {
+  background-color: #fafafa;
+  width: 25%;
+  /* height: 60%; */
+  border: 1px solid #eaeaea;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.login-title,
+.login-title-footer {
+  color: #000;
+  font: Plus Jakarta Sans;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.login-title-footer {
+  font-size: 1.5625rem;
+  font-weight: 400;
+}
+
+.login-form {
+  display: flex;
+  margin: 20px 0;
+  /* background-color: red; */
+  flex-direction: column;
+  gap: 1.37rem;
+}
+
+input {
+  height: 3rem;
+  outline: none;
+  border-radius: 0.625rem;
+  padding: 4px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  color: #b0a9a9;
+  font-family: Plus Jakarta Sans;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input::placeholder {
+  color: #b0a9a9;
+  font-family: Plus Jakarta Sans;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  height: 3rem;
+  border-radius: 0.625rem;
+  border: 1px solid #eaeaea;
+  background: #0016df;
+  box-shadow: 0px 10px 40px 0px rgba(174, 174, 174, 0.2);
+  color: #fff;
+  font-family: Plus Jakarta Sans;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: green;
+  cursor:not-allowed;
+}
+.new-user {
+  position: absolute;
+  bottom: 1rem;
+  width: calc(100% - 40px);
+  text-align: center;
+  color: #333;
+  font-family: Plus Jakarta Sans;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.register-user {
+  color: #333;
+  font-family: Plus Jakarta Sans;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}

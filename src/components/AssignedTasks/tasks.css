@@ -1,0 +1,35 @@
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.assigned-task {
+  margin-bottom: 1rem;
+}
+
+.assigned-by {
+  color: #000;
+  font: Plus Jakarta Sans;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.task-card {
+  background-color: #fafafa;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.task-title {
+  color: #000;
+  font: Plus Jakarta Sans;
+  font-size: 1.5rem;
+  font-weight: 400;
+}

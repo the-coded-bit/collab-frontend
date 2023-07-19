@@ -1,0 +1,18 @@
+/* Navbar.css */
+
+.navbar{
+  display: flex;
+  align-items: last baseline;
+  justify-content: flex-end;
+  gap: 3rem;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.logout-btn{
+  width: 7rem;
+  outline: none;
+}
+
+
+  

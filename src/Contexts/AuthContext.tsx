@@ -84,6 +84,15 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   // Function to remove the user when logged out
   const logout = () => {
+    try{
+      const apiUrl = `${process.env.REACT_APP_BASE_URL}/auth/logout`;
+      const responsePrm = axios.get(apiUrl, { withCredentials: true });
+      toast.promise(responsePrm, {
+        loading: "Logging out...",
+        success: "Logged out successfully",
+        error: "error while logging off",
+      });
+    } catch(err) {}
     setUser(null);
   };
 

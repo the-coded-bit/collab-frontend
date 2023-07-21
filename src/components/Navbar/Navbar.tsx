@@ -1,12 +1,18 @@
 // Navbar.tsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../Contexts";
 import "./Navbar.css"; // Import the CSS file for styling
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+interface NavProps {
+  open: () => void;
+  openNotif: () => void;
+  showNotification: boolean;
+}
+
+const Navbar: React.FC<NavProps> = ({ open, openNotif, showNotification }) => {
   const { user, logout, setUser } = useAuth();
   const navigate = useNavigate();
 
@@ -14,6 +20,7 @@ const Navbar: React.FC = () => {
     // Perform logout logic here (e.g., call an API to invalidate the session)
     // Then, remove the user from the context using the logout function
     logout();
+    navigate("/auth/login");
   };
 
   useEffect(() => {
@@ -44,8 +51,15 @@ const Navbar: React.FC = () => {
       <div>
         Welcome, <span className="login-title-footer">{user.username}</span>
       </div>
-      <button className="logout-btn">Add Task</button>
-      <button className="logout-btn">Logout</button>
+      {showNotification && (
+        <button onClick={openNotif}>Show notification</button>
+      )}
+      <button className="logout-btn" onClick={open}>
+        Add Task
+      </button>
+      <button className="logout-btn" onClick={handleLogout}>
+        Logout
+      </button>
     </nav>
   ) : (
     <div>abc</div>
